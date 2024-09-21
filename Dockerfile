@@ -5,5 +5,5 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY --from=builder /app/target/calendly-0.0.1-SNAPSHOT.jar ./app.jar
+COPY --from=builder /app/target/calendly-api-1.0-SNAPSHOT.jar ./app.jar
 CMD ["java", "-jar", "./app.jar", "server", "src/main/resources/config.yml"]

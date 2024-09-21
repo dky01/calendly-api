@@ -8,8 +8,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.google.inject.Singleton;
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisPoolConfig;
 
 public class CalendlyModule extends AbstractModule {
     private final CalendlyConfiguration configuration;
@@ -24,16 +22,16 @@ public class CalendlyModule extends AbstractModule {
         bind(AvailabilityDao.class).to(InMemAvailabilityDao.class);
     }
 
-    @Provides
-    @Singleton
-    public JedisPool provideJedisPool() {
-        return new JedisPool(
-                new JedisPoolConfig(),
-                "localhost",
-                6379,
-                10000
-        );
-    }
+//    @Provides
+//    @Singleton
+//    public JedisPool provideJedisPool() {
+//        return new JedisPool(
+//                new JedisPoolConfig(),
+//                "localhost",
+//                6379,
+//                10000
+//        );
+//    }
 
     @Provides
     @Singleton
