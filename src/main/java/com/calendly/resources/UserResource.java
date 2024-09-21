@@ -7,7 +7,6 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
 import javax.inject.Inject;
-import java.util.List;
 
 @Path("/users")
 @Produces(MediaType.APPLICATION_JSON)
@@ -31,7 +30,6 @@ public class UserResource {
     public User getUser(
             @PathParam("userId") String userId
     ) {
-        System.out.println("here " + userService.getUser(userId));
         return userService.getUser(userId);
     }
 }

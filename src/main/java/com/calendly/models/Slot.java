@@ -27,7 +27,6 @@ public class Slot {
         LocalTime startTime = LocalTime.of(0, 0).plusMinutes(totalMins);
         LocalTime endTime = startTime.plusMinutes(15);
 
-        // Format the time as HH:mm
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
         String start = startTime.format(formatter);
         String end = endTime.format(formatter);
