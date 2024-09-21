@@ -54,7 +54,7 @@ curl --location 'localhost:8080/user-availability' \
 
 - check overlap for user1 & user2
 ```shell
-curl --location 'localhost:8080/user-availability/user1/overlap/user2?date=11%2F11%2F2024'
+curl --location 'localhost:8080/user-availability/user1/overlap/user2?date=01/01/2024'
 ```
 - output 
 ```json
@@ -83,14 +83,14 @@ curl --location 'localhost:8080/events' \
 --data '{
     "creatorUserId": "user2",
     "opponentUserId": "user1",
-    "date": "11/11/2024",
+    "date": "01/01/2024",
     "slotIndices": [1]
 }'
 ```
 
 - check overlap for user1 and user2 again
 ```shell
-curl --location 'localhost:8080/user-availability/user1/overlap/user2?date=11%2F11%2F2024'
+curl --location 'localhost:8080/user-availability/user1/overlap/user2?date=01/01/2024'
 ```
 - output
 ```json
