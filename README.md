@@ -105,7 +105,7 @@ curl --location 'localhost:8080/user-availability/user1/overlap/user2?date=01/01
 ]
 ```
 
-## Strategy
+## Approach
 - The 24 hours of each day are divided into 96 time blocks or slots, with each slot representing a 15-minute interval. 
   - The approach assumes that any availability windows or event schedules created on the platform will have a minimum duration of 15 minutes.
 
